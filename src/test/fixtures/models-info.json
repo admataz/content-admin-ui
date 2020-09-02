@@ -1,0 +1,228 @@
+[
+    {
+        "info": {
+            "singular": "article",
+            "plural": "articles",
+            "description": "A collection of pieces of writing"
+        },
+        "resourceName": "article",
+        "fields": [
+            {
+                "name": "slug",
+                "label": "URL slug",
+                "dbType": "text",
+                "inputType": "textfield",
+                "inputValidation": "[a-z0-9_]+",
+                "nullable": false,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "title",
+                "label": "Title",
+                "dbType": "text",
+                "inputType": "textfield",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "intro",
+                "label": "Introduction",
+                "dbType": "text",
+                "inputType": "textarea",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "subheading",
+                "label": "Sub Title",
+                "dbType": "text",
+                "inputType": "textfield",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "bodycopy",
+                "label": "Body Copy",
+                "dbType": "text",
+                "inputType": "richtext",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            }
+        ]
+    },
+    {
+        "info": {
+            "singular": "page",
+            "plural": "pages",
+            "description": "Nodes in the site structure"
+        },
+        "resourceName": "page",
+        "required": {
+            "create": [
+                "slug",
+                "template"
+            ]
+        },
+        "fields": [
+            {
+                "name": "slug",
+                "label": "URL slug",
+                "dbType": "text",
+                "inputType": "textfield",
+                "nullable": false,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string",
+                    "pattern": "^([a-zA-Z0-9-_]+)$"
+                }
+            },
+            {
+                "name": "template",
+                "label": "Display Template",
+                "dbType": "text",
+                "inputType": "textfield",
+                "nullable": false,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "section",
+                "label": "Section ID",
+                "dbType": "text",
+                "inputType": "textfield",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "title",
+                "label": "Title",
+                "dbType": "text",
+                "inputType": "textfield",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "intro",
+                "label": "Introduction",
+                "dbType": "text",
+                "inputType": "textarea",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "subheading",
+                "label": "Subtitle",
+                "dbType": "text",
+                "inputType": "textfield",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "bodycopy",
+                "label": "Main content",
+                "dbType": "text",
+                "inputType": "richtext",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "navintro",
+                "label": "Navigation intro",
+                "dbType": "text",
+                "inputType": "textarea",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "image",
+                "label": "Featured Imaage",
+                "dbType": "text",
+                "inputType": "media",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "video",
+                "label": "Featured Video",
+                "dbType": "text",
+                "inputType": "media",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "bgimage",
+                "label": "Background Image",
+                "dbType": "text",
+                "inputType": "media",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "bgvideo",
+                "label": "Background video",
+                "dbType": "text",
+                "inputType": "media",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "bgopacity",
+                "label": "Background Opacity (%)",
+                "dbType": "numeric",
+                "inputType": "number",
+                "nullable": true,
+                "schemaType": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "number"
+                }
+            }
+        ]
+    }
+]
